@@ -1,0 +1,14 @@
+body{
+    font-family: sans-serif;
+}
+
+#submitBtn{
+    padding: 5px 25px;
+    border-radius: 5px;
+    background-color: rgb(171, 96, 171)
+}
+
+.myLabels{
+    font-size: 2em;
+    color: blue
+}

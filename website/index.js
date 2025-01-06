@@ -1,3 +1,43 @@
+function temperature_converter(){
+    const textBox = document.getElementById("textBox");
+    const toFahrenheit = document.getElementById("toFahrenheit");
+    const toCelsius = document.getElementById("toCelsius");
+    const result = document.getElementById("result");
+    let temp;
+
+    function convert(){
+        console.log("Hello")
+        if(toFahrenheit.checked){
+            temp = Number(textBox.value);
+            temp = temp * 9 / 5 + 32;
+            result.textContent = temp.toFixed(1) + "°F";
+        }
+        else if(toCelsius.checked){
+            temp = Number(textBox.value);
+            temp = (temp - 32) * (5/9);
+            result.textContent = temp.toFixed(1) + "°C";
+        }
+        else{
+            result.textContent = "Select a unit";
+        }
+    }
+
+    convert()
+}
+
+function variable_scopes(){
+    let x = 3;
+
+    function function1(){
+        let x = 1;
+        console.log(y);
+    }
+
+    function function2(){
+        let y = 2;
+        console.log(x);
+    }
+}
 
 function learning_functions(){
     function add(x, y){
@@ -546,3 +586,5 @@ I have called all of the functions created below ↓
 // for_loops(): Repeats tasks a certain number of times
 // number_guessing_game(): An interactive game to guess a number
 // learning_functions(): How to use functions to organize code
+// variable_scopes(): Where a variable is recognized and accessible (local vs global)
+// temperature_converter(): A simple temperature converter program
